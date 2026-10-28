@@ -1,0 +1,594 @@
+
+/* ==============================
+   NEWS PAGE
+============================== */
+
+.news-page {
+  min-height: 70vh;
+  background: #ffffff;
+}
+
+.news-hero {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 75%);
+  border-bottom: 1px solid #e5eee7;
+}
+
+.news-eyebrow {
+  display: inline-block;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.news-heading {
+  max-width: 760px;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: #17251b;
+}
+
+.news-heading span {
+  color: #16a34a;
+}
+
+.news-intro {
+  max-width: 650px;
+  margin-top: 18px;
+  color: #647067;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.news-count {
+  color: #647067;
+  font-size: 14px;
+}
+
+.news-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.news-illustration {
+  position: relative;
+  display: flex;
+  min-height: 175px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.news-illustration.market {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+}
+
+.news-illustration.investing {
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.news-illustration.finance {
+  background: linear-gradient(135deg, #fef3c7, #fffbeb);
+}
+
+.news-illustration.analysis {
+  background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+}
+
+.news-illustration.strategy {
+  background: linear-gradient(135deg, #fce7f3, #fdf2f8);
+}
+
+.news-illustration.portfolio {
+  background: linear-gradient(135deg, #cffafe, #ecfeff);
+}
+
+.news-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.news-icon {
+  font-size: 62px;
+  line-height: 1;
+}
+
+.news-decoration {
+  position: absolute;
+  right: 20px;
+  bottom: 8px;
+  color: rgba(22, 163, 74, 0.25);
+  font-size: 48px;
+}
+
+.news-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.news-category {
+  margin-bottom: 12px;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.news-card-title {
+  margin-bottom: 12px;
+  color: #17251b;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.news-description {
+  flex: 1;
+  margin-bottom: 22px;
+  color: #647067;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.news-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #eef0f2;
+}
+
+.news-read-time {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.news-read-link {
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.news-read-link:hover {
+  color: #166534;
+  text-decoration: underline;
+}
+
+.news-disclaimer {
+  padding: 16px 18px;
+  color: #647067;
+  background: #f8faf9;
+  border: 1px solid #e5eee7;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==============================
+   STOCK GAIN / LOSS COLORS
+============================== */
+
+.stock-change {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.positive-bg {
+  color: #15803d !important;
+  background-color: #dcfce7 !important;
+}
+
+.negative-bg {
+  color: #b91c1c !important;
+  background-color: #fee2e2 !important;
+}
+
+.positive {
+  color: #16a34a !important;
+  font-weight: 600;
+}
+
+.negative {
+  color: #dc2626 !important;
+  font-weight: 600;
+}
+
+/* ==============================
+   RESPONSIVE ADJUSTMENTS
+============================== */
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .news-heading {
+    letter-spacing: -0.7px;
+  }
+
+  .news-intro {
+    font-size: 15px;
+  }
+
+  .news-illustration {
+    min-height: 155px;
+  }
+
+  .news-card-body {
+    padding: 18px;
+  }
+
+  .stock-change {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-card {
+    transition: none;
+  }
+
+  .news-card:hover {
+    transform: none;
+  }
+}
+
+.stock-change {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.positive-bg {
+  color: #15803d !important;
+  background-color: #dcfce7 !important;
+}
+
+.negative-bg {
+  color: #b91c1c !important;
+  background-color: #fee2e2 !important;
+}
+
+.positive {
+  color: #16a34a !important;
+  font-weight: 600;
+}
+
+.negative {
+  color: #dc2626 !important;
+  font-weight: 600;
+}
+
+/* =================================
+   PORTFOLIO PAGE
+================================= */
+
+.portfolio-page {
+  max-width: 1200px;
+}
+
+.portfolio-eyebrow {
+  color: #16a34a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.portfolio-heading .section-title {
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Main portfolio summary */
+
+.portfolio-summary {
+  padding: 28px 30px;
+  border: 1px solid #bbf7d0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #f0fdf4, #dcfce7);
+  color: #166534;
+}
+
+.portfolio-summary-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.portfolio-label {
+  color: #166534;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.portfolio-total {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 750;
+  letter-spacing: -1px;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #16a34a;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.portfolio-summary-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #bbf7d0;
+  color: #4d7c5b;
+  font-size: 12px;
+}
+
+/* Statistic cards */
+
+.portfolio-stat-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.portfolio-stat-card h4 {
+  margin: 0;
+  color: #111827;
+  font-size: 23px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.green-icon {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.blue-icon {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.orange-icon {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+/* Panels and form */
+
+.portfolio-panel {
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+.portfolio-panel-heading h5,
+.portfolio-panel > div > h5 {
+  color: #111827;
+  font-weight: 700;
+}
+
+.portfolio-panel .form-label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.portfolio-panel .form-control,
+.portfolio-panel .form-select {
+  min-height: 44px;
+  border-color: #d1d5db;
+  border-radius: 8px;
+}
+
+.portfolio-panel .form-control:focus,
+.portfolio-panel .form-select:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
+}
+
+.portfolio-add-btn {
+  min-height: 44px;
+  font-weight: 600;
+}
+
+/* Holdings table */
+
+.portfolio-table {
+  min-width: 680px;
+}
+
+.portfolio-table thead th {
+  padding: 15px 12px;
+  background: #f9fafb;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.portfolio-table tbody td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.portfolio-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.portfolio-company {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 185px;
+}
+
+.portfolio-company-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-weight: 700;
+}
+
+.portfolio-value {
+  color: #15803d !important;
+  font-weight: 700;
+}
+
+.portfolio-holdings-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Empty portfolio */
+
+.portfolio-empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #f0fdf4;
+  color: #16a34a;
+  font-size: 27px;
+}
+
+.portfolio-empty h6 {
+  color: #111827;
+  font-weight: 700;
+}
+
+.portfolio-disclaimer {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 576px) {
+  .portfolio-summary {
+    padding: 22px 18px;
+  }
+
+  .portfolio-summary-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    font-size: 24px;
+  }
+
+  .portfolio-stat-card {
+    padding: 17px;
+  }
+
+  .portfolio-stat-card h4 {
+    font-size: 21px;
+  }
+
+  .portfolio-panel {
+    border-radius: 12px;
+  }
+
+  .portfolio-table thead th,
+  .portfolio-table tbody td {
+    padding: 12px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-stat-card {
+    transition: none;
+  }
+
+  .portfolio-stat-card:hover {
+    transform: none;
+  }
+}
